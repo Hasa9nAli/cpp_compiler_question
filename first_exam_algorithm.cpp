@@ -6,10 +6,7 @@ void show_message(int numberOfState) {
 void _error_message(string type_error) {
 	cout << "Error Becase" << type_error<<endl; 
 }
-bool isDigit(char character) {
-	if ((character >= 'a' && character < 'z') || (character >= 'A' && character <= 'Z'))
-		return true;
-}
+
 void main() {
 
 	int state = 1; 
@@ -37,7 +34,8 @@ void main() {
 					state = 3;
 				}
 				else {
-					_error_message("Not enter special character or b ");
+					//error message and exit from loop
+					_error_message(" Not enter special character or b ");
 					state = EOS;
 
 				}
@@ -55,20 +53,25 @@ void main() {
 					state = 3;
 				}
 				else {
-					_error_message("8 or 9 or d or D ");
+					//error message and exit from loop 
+					_error_message(" 8 or 9 or d  ");
 					state = EOS;
 				}
 			}
+			
 			if (state == 3) {
 				show_message(3);
 				cin >> caracter;
-				if (caracter == 'a' || caracter == 'A') {
+				// go to state 1 
+				if (caracter == 'a' ) {
 					state = 1;
 				}
+				// go to state  2 
 				else if (caracter == 'c')
 					state = 2;
 			
 				else {
+					//error message and exit from loop 
 					_error_message(" not enter the c or a ");
 					state = EOS;
 				}
