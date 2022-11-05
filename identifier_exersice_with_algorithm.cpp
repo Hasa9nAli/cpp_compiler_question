@@ -1,3 +1,10 @@
+/***********************************************************************************************************/
+/*                       THIS CODE WRITTEN BY HASAN ALI HASN                                               */
+/*                     GDSC MOSUL LEADER AND FRONT-END DEVELPER                                             */
+/*                             CONTACT WITH ME          
+/*-----------------------------ihasanalihasan@gmail.com-----------------------------------------------------*/
+/*-----------------------------linkedin -> ihasanalihasan-----------------------------------------------------*/
+/***********************************************************************************************************/
 #include<iostream>
 using namespace std; 
 void _error_message(string type_error , char letter= NULL) {
