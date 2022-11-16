@@ -1,5 +1,5 @@
 /***********************************************************************************************************/
-/*                       THIS CODE WRITTEN BY HASAN ALI HASN                                               */
+/*                       THIS CODE WRITTEN BY HASAN ALI HASAN                                               */
 /*                     GDSC MOSUL LEADER AND FRONT-END DEVELPER                                             */
 /*                             CONTACT WITH ME          
 /*-----------------------------ihasanalihasan@gmail.com-----------------------------------------------------*/
