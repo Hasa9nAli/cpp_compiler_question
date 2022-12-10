@@ -7,15 +7,12 @@ int main() {
 	const char slash = '/';
 	const char star = '*';
 	const int FOS = 6;
-
-
 	Travers:while (state < 5 ) {
 		switch (state) {
 		case 1: {
 			cin >> comment;
 			if (comment == slash) {
 				state = 2;
-
 			}
 			else {
 				cout << "Error The First Slash is Not Exist  \n";
@@ -30,7 +27,6 @@ int main() {
 				state = 3;
 			}
 			else {
-
 				cout << "Error The First Star is Not Exist  \n";
 				state = FOS;
 			};
@@ -62,6 +58,4 @@ int main() {
 		cout << "The Text is Comment";
 	else
 		cout << "The Text is No Comment";
-
 }
-	
