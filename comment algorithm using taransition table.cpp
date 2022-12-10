@@ -1,21 +1,45 @@
 #include <iostream>
-using namespace std; 
-int main() {
-	char transitionTable[6][5]{
-		{'#','/' , '*' , 'o', 'a'},
-		{'1' , '2' ,'0', '0', 'n'},
-		{'2' , '0' , '3', '0' , 'n'},
-		{'3' , '3', '4', '3' , 'n'},
-		{'4' , '5' , '4', '3' , 'n'},
-		{'5' , '0', '0','0', 'y'}
+using namespace std;
+int main()
+{
+	const char EndCasee = 'E';
+	// define state & newState & the input character
+	int state = 1, newstate; char character;
+	// declare transition table 
+	char taransition_table[6][5] = {
+			{'#','/','*','O','A'},
+			{ 1 , 2 , 0 , 0 ,'A'},
+			{ 2 , 0 , 3 , 0 ,'A'},
+			{ 3 , 3 , 4 , 3 ,'A'},
+			{ 4 , 5 , 4 , 3 ,'A'},
+			{ 5 , 0 , 0 , 0 ,EndCasee}
 	};
-	for (int i = 0; i < 6; i++) {
-		for (int j = 0;j < 5; j++)
-			cout << transitionTable[i][j]<< "   ";
-		cout << endl; 
-	}
-	 
 
+	cout << "ch:";
+	while (taransition_table[state][4] != EndCasee && state != 0) {
+		 cin >> character;
+		 // check the state one 
+		if (character == '/') {
+			newstate = taransition_table[state][1];
+		}
+		else if (character == '*') {
+			newstate = taransition_table[state][2];
+		}
 
-	system("pause"); 
+		else {
+			newstate = taransition_table[state][3];
+		}
+
+		if (state == 5)
+			break;
+		else 
+		state = newstate;
+
+	}// End While
+
+	if (state == 5)
+		cout << "Accept..";
+	else
+		cout << "No Accept..";
+
 }
