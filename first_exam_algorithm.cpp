@@ -6,9 +6,7 @@ void show_message(int numberOfState) {
 void _error_message(string type_error) {
 	cout << "Error Becase" << type_error<<endl; 
 }
-
 void main() {
-
 	int state = 1; 
 	char caracter; 
 	const int EOS = -1;
@@ -19,11 +17,8 @@ void main() {
 	if (caracter == '1' || caracter == '0') {
 		while (state < 4 && state > 0) {
 			if (state == 1) {
-
 				show_message(1);
 				cin >> caracter;
-				
-
 				if (caracter == '1' || caracter == '0')
 					state = 1;
 				// the condition of specal caracter go to state 2 
@@ -40,7 +35,6 @@ void main() {
 
 				}
 			}
-
 			if (state == 2) {
 				show_message(2);
 				cin >> caracter;
@@ -81,6 +75,5 @@ void main() {
 	else {
 		_error_message("Not Start with 1 or 0 ");
 	}
-		
 	system("pause");
 	}
