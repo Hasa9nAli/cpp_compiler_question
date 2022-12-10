@@ -2,7 +2,6 @@
 using namespace std;
 void _show_current_state(int numberOfState) {
 	cout << "\nyou are in state " << numberOfState << endl;
-
 }
 void _ERORR_MESSAGE(string TypeOfError) {
 	cout << "Error Becase the input did not " << TypeOfError <<endl;
@@ -15,7 +14,6 @@ int main() {
 	const int EOS = -1; 
 	char input; 
 	int check = 1; 
-
 	while (state < 4 && state > 0) {
 		switch (state)
 		{
@@ -34,9 +32,7 @@ int main() {
 			else {
 				_ERORR_MESSAGE("start with Hash");
 				state = EOS;
-
 			}
-
 		};
 		break;
 		// end case 1 
@@ -46,7 +42,6 @@ int main() {
 		cin >> input;
 		if (isdigit(input))
 			state = 3;
-
 		else if (input == EXCLAMATION)
 			// or goto state 1 
 			state = 1;
@@ -54,7 +49,6 @@ int main() {
 			_ERORR_MESSAGE("digit or Exclamation");
 			state = EOS;
 		}
-
 	};
 	break;
 	// end state 2 
@@ -62,8 +56,6 @@ int main() {
 state3:case 3:
 	_show_current_state(3);
 	cin >> input; 
-	
-
 	if (input == LESS_THAN)
 	{
 		state = 3;
