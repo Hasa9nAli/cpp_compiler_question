@@ -14,7 +14,6 @@ int main()
 			{ 4 , 5 , 4 , 3 ,'A'},
 			{ 5 , 0 , 0 , 0 ,EndCasee}
 	};
-
 	cout << "ch:";
 	while (taransition_table[state][4] != EndCasee && state != 0) {
 		 cin >> character;
@@ -25,7 +24,6 @@ int main()
 		else if (character == '*') {
 			newstate = taransition_table[state][2];
 		}
-
 		else {
 			newstate = taransition_table[state][3];
 		}
@@ -34,12 +32,9 @@ int main()
 			break;
 		else 
 		state = newstate;
-
 	}// End While
-
 	if (state == 5)
 		cout << "Accept..";
 	else
 		cout << "No Accept..";
-
 }
