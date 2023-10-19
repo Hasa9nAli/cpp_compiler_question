@@ -24,7 +24,7 @@ int main() {
         cin >> character;
         state = SECOND_STATE;
 
-        while (isLetter(character) || isDigit(character) || character !='~') {
+        while (isLetter(character) || isDigit(character)) {
             cin >> character;
             state = SECOND_STATE;
             if(character == '~'){
