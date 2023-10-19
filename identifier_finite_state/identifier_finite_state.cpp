@@ -9,7 +9,6 @@ bool isLetter(char character){
 bool isDigit(char character){
     if( character >= '0' && character <= '9')
         return true ;
-
     return false;
 }
 
@@ -25,10 +24,15 @@ int main() {
         cin >> character;
         state = SECOND_STATE;
 
-        while (isLetter(character) || isDigit(character)) {
+        while (isLetter(character) || isDigit(character) || character !='~') {
             cin >> character;
             state = SECOND_STATE;
+            if(character == '~'){
+                state = 3;
+                break;
+            }
         }
+
         if (state == THIRD_STATE) {
             cout << "ACCEPTED";
         } else
