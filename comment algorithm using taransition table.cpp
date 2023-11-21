@@ -4,7 +4,7 @@ int main()
 {
 	const char END_CASE = 'E';
 	// define state & newState & the input character
-	int state = 1, newstate; char character;
+	int state = 1, newState; char character;
 	// declare transition table 
 	char taransition_table[6][5] = {
 			{'#','/','*','O','A'},
@@ -19,19 +19,19 @@ int main()
 		 cin >> character;
 		 // check the state one 
 		if (character == '/') {
-			newstate = taransition_table[state][1];
+			newState = taransition_table[state][1];
 		}
 		else if (character == '*') {
-			newstate = taransition_table[state][2];
+			newState = taransition_table[state][2];
 		}
 		else {
-			newstate = taransition_table[state][3];
+			newState = taransition_table[state][3];
 		}
 
 		if (state == 5)
 			break;
 		else 
-		state = newstate;
+		state = newState;
 	}// End While
 	if (state == 5)
 		cout << "Accept..";
