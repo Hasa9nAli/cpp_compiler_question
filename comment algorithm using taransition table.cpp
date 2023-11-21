@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-	const char EndCasee = 'E';
+	const char END_CASE = 'E';
 	// define state & newState & the input character
 	int state = 1, newstate; char character;
 	// declare transition table 
@@ -12,10 +12,10 @@ int main()
 			{ 2 , 0 , 3 , 0 ,'A'},
 			{ 3 , 3 , 4 , 3 ,'A'},
 			{ 4 , 5 , 4 , 3 ,'A'},
-			{ 5 , 0 , 0 , 0 ,EndCasee}
+			{ 5 , 0 , 0 , 0 ,END_CASE}
 	};
 	cout << "ch:";
-	while (taransition_table[state][4] != EndCasee && state != 0) {
+	while (taransition_table[state][4] != END_CASE && state != 0) {
 		 cin >> character;
 		 // check the state one 
 		if (character == '/') {
