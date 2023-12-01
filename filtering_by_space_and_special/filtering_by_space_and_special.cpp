@@ -16,14 +16,13 @@ bool isSpecialCharacter(const char token) {
 }
 
 int main() {
-    string token;
-    FILE *FILE_TEXT;
-    FILE_TEXT = ::fopen("text.txt", "r");
-    string temp2;
-    string temp1;
-    temp1 = temp2 = "";
+    const string emptySpace = "";
+    const char *const pathOfFile = "text.txt" ;
+    string token,
+            st[30],
+            temp1 = "";
+    FILE *FILE_TEXT; FILE_TEXT = ::fopen(pathOfFile, "r");
     char line[100];
-    string st[30];
     int index = 0;
     while (!feof(FILE_TEXT)) {
         fgets(line, 100, FILE_TEXT);
@@ -33,15 +32,15 @@ int main() {
             }
             else if(isSpecialCharacter(line[i]) && line[i] != '\n'){
                 st[index] = temp1;
-                temp1 = "";
+                temp1 = emptySpace;
                 index++;
-               st[index] = line[i];
+                st[index] = line[i];
                 index++;
             }
             else {
-                if (temp1 != "" && line[i] != '\n'){
+                if (temp1 != emptySpace && line[i] != '\n'){
                     st[index] = temp1;
-                    temp1 = "";
+                    temp1 = emptySpace;
                     index++;
                 }
             }
