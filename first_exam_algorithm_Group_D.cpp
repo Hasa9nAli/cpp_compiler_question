@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 
-void _show_current_state(int numberOfState) {
+void showCurrentState(int numberOfState) {
   cout << "\nyou are in state " << numberOfState << endl;
 
 }
-void _ERORR_MESSAGE(string TypeOfError) {
+void errorMessage(string TypeOfError) {
   cout << "Error Becase the input did not " << TypeOfError <<endl;
 }
 int main() {
@@ -23,7 +23,7 @@ const int EOS = -1;
     {
       // start case 1 
     state1:case 1: {
-      _show_current_state(1);
+      showCurrentState(1);
       cin >> input;
       if (input == HASH) {
         state = 1; 
@@ -34,7 +34,7 @@ const int EOS = -1;
         // or goto state 2 
       }
       else {
-        _ERORR_MESSAGE("start with Hash or not exist the $ after the Hash");
+        errorMessage("start with Hash or not exist the $ after the Hash");
         state = EOS;
 
       }
@@ -43,8 +43,9 @@ const int EOS = -1;
     break;
     // end case 1 
     // start case 2 
-  state2:case 2: {
-    _show_current_state(2);
+  state2
+  :case 2: {
+    showCurrentState(2);
     cin >> input;
     if (isdigit(input))
       state = 3;
@@ -53,7 +54,7 @@ const int EOS = -1;
       // or goto state 1 
       state = 1;
     else {
-      _ERORR_MESSAGE("digit or Exclamation");
+      errorMessage("digit or Exclamation");
       state = EOS;
     }
 
@@ -62,7 +63,7 @@ const int EOS = -1;
   // end state 2 
   // start case 3
 state3:case 3:
-  _show_current_state(3);
+  showCurrentState(3);
   cin >> input; 
   
 
@@ -71,7 +72,7 @@ state3:case 3:
     state = 3;
   }
   else {
-    _ERORR_MESSAGE("achieve the last state continuty ");
+    errorMessage("achieve the last state continuty ");
     state = EOS;
   }
     }
